@@ -60,15 +60,3 @@
 pip install -r requirements.txt
 cd notebooks && jupyter lab
 ```
-
-## 关于 `_归档/`
-
-这些内容已从主目录移出，确认无误后可整个删除：
-
-| 子目录 | 内容 |
-|---|---|
-| `重复数据/` | 与保留件**字节完全相同**的副本：6 个源域 `.mat`（原在「滤波」文件夹）、重复的 `Whole Process.ipynb` / `test.ipynb` / `dataset_complete.csv` / `dataset_augmented - 1.csv` / `processed_data.pkl - 2` 等 |
-| `旧版notebook/` | 被 `- 1` / `- 2` 版本取代的 `Preprocessing/Training/augmentation`，以及散落在 17 个数据子目录里的同一份 `text.ipynb` |
-| `分目录中间特征/` | 每个损伤尺寸目录下的 `all_features.csv`，已汇总进 `data/features/source/` 的主特征表 |
-| `notebook改路径前备份/` | 15 个 notebook 的改路径前原件，可用于回退 |
-| `系统垃圾/` | macOS `.DS_Store` |
