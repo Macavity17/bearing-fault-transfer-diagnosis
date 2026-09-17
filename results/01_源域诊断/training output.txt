@@ -1,0 +1,86 @@
+✅ Successfully loaded 'processed_data.pkl - 1'.
+
+==================================================
+--- Model Input Details ---
+✅ The model will be trained on the following 27 features:
+   - rpm, Mean, RMS, Var, Skew
+   - Kurt, CF, MF, P2P, FreqMean
+   - FreqSTD, FreqSkew, FreqKurt, IR_Sideband_Energy_DE, IR_Sideband_Ratio_DE
+   - B_Sideband_Energy_DE, B_Sideband_Ratio_DE, IR_Sideband_Energy_FE, IR_Sideband_Ratio_FE, B_Sideband_Energy_FE
+   - B_Sideband_Ratio_FE, Env_Peak_BPFO_DE, Env_Peak_BPFI_DE, Env_Peak_BSF_DE, Env_Peak_BPFO_FE
+   - Env_Peak_BPFI_FE, Env_Peak_BSF_FE
+
+✅ The model will predict the following 21 labels:
+   - ['DE_B_14', 'DE_B_21', 'DE_B_28', 'DE_B_7', 'DE_IR_14', 'DE_IR_21', 'DE_IR_28', 'DE_IR_7', 'DE_OR_14', 'DE_OR_21', 'DE_OR_7', 'FE_B_14', 'FE_B_21', 'FE_B_7', 'FE_IR_14', 'FE_IR_21', 'FE_IR_7', 'FE_OR_14', 'FE_OR_21', 'FE_OR_7', 'No_IN_0']
+
+Label to Integer Mapping:
+   - {'DE_B_14': 0, 'DE_B_21': 1, 'DE_B_28': 2, 'DE_B_7': 3, 'DE_IR_14': 4, 'DE_IR_21': 5, 'DE_IR_28': 6, 'DE_IR_7': 7, 'DE_OR_14': 8, 'DE_OR_21': 9, 'DE_OR_7': 10, 'FE_B_14': 11, 'FE_B_21': 12, 'FE_B_7': 13, 'FE_IR_14': 14, 'FE_IR_21': 15, 'FE_IR_7': 16, 'FE_OR_14': 17, 'FE_OR_21': 18, 'FE_OR_7': 19, 'No_IN_0': 20}
+==================================================
+
+--- Stage 1: Model Comparison via Cross-Validation ---
+
+🔄 Starting cross-validation...
+   - Evaluating: Random Forest...
+   - Evaluating: AdaBoost...
+   - Evaluating: XGBoost...
+
+🎉 --- Cross-Validation Complete --- 🎉
+Model Performance Comparison:
+               Train_Accuracy_Mean  Validation_Accuracy_Mean
+Model                                                       
+Random Forest               1.0000                    0.9792
+AdaBoost                    0.1756                    0.1720
+XGBoost                     1.0000                    0.9655
+
+🔄 Generating model comparison chart...
+✅ Comparison chart saved to 'model_comparison_accuracy.png'
+
+🏆 Based on mean validation accuracy, the best model is: **Random Forest**
+
+--- Stage 2: Final Training and Evaluation of the Best Model (Random Forest) ---
+
+🔄 Training the final Random Forest model on all training data...
+✅ Final model training complete.
+
+🔄 Evaluating on the independent test set...
+
+--- Final Model Performance on Test Set ---
+✅ Accuracy: 0.9714
+
+📋 Classification Report:
+              precision    recall  f1-score   support
+
+     DE_B_14       0.95      1.00      0.98        20
+     DE_B_21       0.83      1.00      0.91        20
+     DE_B_28       1.00      1.00      1.00        20
+      DE_B_7       1.00      1.00      1.00        20
+    DE_IR_14       1.00      0.95      0.97        20
+    DE_IR_21       1.00      1.00      1.00        20
+    DE_IR_28       1.00      1.00      1.00        20
+     DE_IR_7       0.95      1.00      0.98        20
+    DE_OR_14       0.90      0.95      0.93        20
+    DE_OR_21       0.95      0.95      0.95        20
+     DE_OR_7       0.93      0.65      0.76        20
+     FE_B_14       1.00      1.00      1.00        20
+     FE_B_21       1.00      1.00      1.00        20
+      FE_B_7       1.00      0.95      0.97        20
+    FE_IR_14       0.95      1.00      0.98        20
+    FE_IR_21       1.00      1.00      1.00        20
+     FE_IR_7       0.95      1.00      0.98        20
+    FE_OR_14       1.00      1.00      1.00        20
+    FE_OR_21       1.00      0.95      0.97        20
+     FE_OR_7       1.00      1.00      1.00        20
+     No_IN_0       1.00      1.00      1.00        20
+
+    accuracy                           0.97       420
+   macro avg       0.97      0.97      0.97       420
+weighted avg       0.97      0.97      0.97       420
+
+
+🔄 Generating confusion matrix chart...
+✅ Confusion matrix saved to 'random_forest_confusion_matrix.png'
+
+🔄 Generating feature importance chart for Random Forest...
+✅ Feature importance chart saved to 'random_forest_feature_importance.png'
+
+✅ Trained model has been saved to: 'random_forest_final_model.pkl'

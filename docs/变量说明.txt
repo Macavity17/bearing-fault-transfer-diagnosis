@@ -1,0 +1,44 @@
+1. D
+2. d
+3. Nd
+
+1. PE: Pivot End 出问题的轴承位置
+2. DeLoc: Default Location
+3. DeS: Default Size
+4. Freq: Frequency
+5. Len: Length
+6. HP: Horse Power
+7. OR_De_Type: Outer Default Type
+8. rpm: Round per Minute
+9. SenLoc: Sensor Location
+10. DFFreq: Default Featured Frequency （等数据有了wpx算）
+11.Mean: Mean 信号幅值的算术平均值，反映了信号的直流分量或中心趋势。
+12. RMS: Root Mean Square 均方根值，反映了振动信号的能量或强度。
+13. Var: Variance 方差，衡量信号围绕其均值的波动程度。	
+14. Skew: Skewness 偏度，描述信号幅值分布的不对称性。	
+15. Kurt: Kurtosis 峭度，衡量信号冲击成分的多少，峭度值越大通常意味着冲击性越强。	
+16. CF: Crest Factor 峰值因子，信号峰值与RMS的比值，对冲击信号非常敏感。
+17: MF: Margin Factor 裕度因子，信号峰值与方根幅值的比值，同样用于衡量冲击性。	
+18: P2P: Peak-to-Peak 峰峰值，信号最大值与最小值之差，反映了信号的整体振幅范围。	
+19. FreqMean: Mean Frequency 频谱的加权平均频率，反映了信号能量主要集中的频率区域。	
+20. FreqSTD: Frequency Standard Deviation 频率标准差，衡量频谱的分散程度，也称为谱的二阶矩。	
+21. FreqSkew: Spectral Skewness 频谱偏度，描述频谱能量分布的不对称性。
+22. FreqKurt: Spectral Kurtosis 频谱峭度，衡量频谱中频率成分的集中度或尖锐度。
+
+
+边带分析特征 (Sideband Analysis Features)		
+IR_Sideband_Energy_DE	IR_SE_DE	基于驱动端(DE)轴承参数，计算出的内圈故障频率(BPFI)两侧的转频边带能量总和。该值显著，是内圈故障调制的强烈标志。
+IR_Sideband_Ratio_DE	IR_SR_DE	基于驱动端(DE)轴承参数，计算出的内圈故障边带能量与主频能量的比值。比值高，说明调制现象更明显。
+B_Sideband_Energy_DE	B_SE_DE	基于驱动端(DE)轴承参数，计算出的滚动体故障频率(BSF)两侧的保持架频率边带能量总和。
+B_Sideband_Ratio_DE	B_SR_DE	基于驱动端(DE)轴承参数，计算出的滚动体故障边带能量与主频能量的比值。
+IR_Sideband_Energy_FE	IR_SE_FE	基于风扇端(FE)轴承参数，计算出的内圈故障频率(BPFI)两侧的转频边带能量总和。
+IR_Sideband_Ratio_FE	IR_SR_FE	基于风扇端(FE)轴承参数，计算出的内圈故障边带能量与主频能量的比值。
+B_Sideband_Energy_FE	B_SE_FE	基于风扇端(FE)轴承参数，计算出的滚动体故障频率(BSF)两侧的保持架频率边带能量总和。
+B_Sideband_Ratio_FE	B_SR_FE	基于风扇端(FE)轴承参数，计算出的滚动体故障边带能量与主频能量的比值。
+包络谱分析特征 (Envelope Spectrum Analysis Features)		
+Env_Peak_BPFO_DE	EnvP_BPFO_DE	信号包络谱中，与驱动端(DE)外圈故障理论频率(BPFO)对应的峰值高度。峰值高表示存在清晰的、与外圈故障匹配的周期性冲击。
+Env_Peak_BPFI_DE	EnvP_BPFI_DE	信号包络谱中，与驱动端(DE)内圈故障理论频率(BPFI)对应的峰值高度。
+Env_Peak_BSF_DE	EnvP_BSF_DE	信号包络谱中，与驱动端(DE)滚动体故障理论频率(BSF)对应的峰值高度。
+Env_Peak_BPFO_FE	EnvP_BPFO_FE	信号包络谱中，与风扇端(FE)外圈故障理论频率(BPFO)对应的峰值高度。
+Env_Peak_BPFI_FE	EnvP_BPFI_FE	信号包络谱中，与风扇端(FE)内圈故障理论频率(BPFI)对应的峰值高度。
+Env_Peak_BSF_FE	EnvP_BSF_FE	信号包络谱中，与风扇端(FE)滚动体故障理论频率(BSF)对应的峰值高度。
